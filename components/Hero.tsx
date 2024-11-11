@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -49,7 +50,12 @@ const Hero = () => {
 						Hi there , I am munachimso, a passionate software developer based in Nigeria.
 					</p>
 					<a href="#about">
-						<MagicButton title="Showcase my work" />
+						<MagicButton
+							title="Showcase my work"
+							handleClick={function (): void {
+								throw new Error("Function not implemented.");
+							}}
+						/>
 					</a>
 				</div>
 			</div>
