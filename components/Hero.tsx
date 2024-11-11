@@ -1,5 +1,6 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
 	return (
@@ -37,6 +38,10 @@ const Hero = () => {
 					text-xs text-center text-blue-100 mas-w-80">
 						Dynamic web portfolio
 					</h2>
+					<TextGenerateEffect
+						words="Welcome to my website, I'm Munachimso!"
+						className="text-center text-[40px] md:text-5xl lg:text-6xl"
+					/>
 				</div>
 			</div>
 		</div>
