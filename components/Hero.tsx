@@ -39,9 +39,14 @@ const Hero = () => {
 						Dynamic web portfolio
 					</h2>
 					<TextGenerateEffect
-						words="Welcome to my website, I'm Munachimso!"
+						words="Crafting Seamless Digital Experiences"
 						className="text-center text-[40px] md:text-5xl lg:text-6xl"
 					/>
+					<p
+						className="text-center
+					md:tracking-wider mb-4 text-sm md:text-lg lg:text-3xl">
+						Hi there , I am munachimso, a passionate software developer based in Nigeria.
+					</p>
 				</div>
 			</div>
 		</div>
