@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
+import svgToDataUri from "mini-svg-data-uri";
+import tailwindcssAnimate from "tailwindcss-animate";
+//import flattenColorPalette from "";
 
-const svgToDataUri = require("mini-svg-data-uri");
-
-const colors = require("tailwindcss/colors");
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 const config = {
 	darkMode: ["class"],
@@ -154,7 +154,7 @@ const config = {
 		},
 	},
 	plugins: [
-		require("tailwindcss-animate"),
+		tailwindcssAnimate,
 		addVariablesForColors,
 		function ({ matchUtilities, theme }: any) {
 			matchUtilities(
@@ -176,8 +176,8 @@ const config = {
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
-	let allColors = flattenColorPalette(theme("colors"));
-	let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+	const allColors = flattenColorPalette(theme("colors"));
+	const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
 
 	addBase({
 		":root": newVars,
