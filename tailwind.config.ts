@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
 import tailwindcssAnimate from "tailwindcss-animate";
-//import flattenColorPalette from "";
+import flattenColorPalette from "";
 
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
 	darkMode: ["class"],
