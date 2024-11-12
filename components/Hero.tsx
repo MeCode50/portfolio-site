@@ -3,6 +3,7 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { MagicButton } from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
 	return (
@@ -52,6 +53,8 @@ const Hero = () => {
 					<a href="#about">
 						<MagicButton
 							title="Showcase my work"
+							icon={<FaLocationArrow />}
+							position="right"
 							handleClick={function (): void {
 								throw new Error("Function not implemented.");
 							}}
