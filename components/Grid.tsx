@@ -5,7 +5,7 @@ export const Grid = () => {
 	return (
 		<section id="about">
 			<BentoGrid>
-				{[{ title: "title1", description: "Desc1", id: "1" }].map((item) => (
+				{[{ title: "title1", description: "Desc1", id: 1 }].map((item) => (
 					<BentoGridItem
 						id={item.id}
 						key={item.id}
